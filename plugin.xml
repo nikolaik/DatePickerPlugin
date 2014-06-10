@@ -24,7 +24,7 @@
             </feature>
         </config-file>
 
-        <source-file src="src/android/DatePickerPlugin.java" target-dir="src/no/zepplin/plugins" />
+        <source-file src="src/android/DatePickerPlugin.java" target-dir="src/no/zeppelin/plugins" />
     </platform>
 
 </plugin>
