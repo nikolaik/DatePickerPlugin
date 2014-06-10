@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    id="no.zeppelin.plugins.DatePickerPlugin"
+    version="1.0.0">
+
+    <name>DatePickerPlugin</name>
+    <author>Cristobal Dabed</author>
+    <description>This plugin gives you a native datepicker widget on Android (2.x style)</description>
+    <license>MIT</license>
+
+    <js-module src="www/DatePickerPlugin.js" name="DatePickerPlugin">
+        <clobbers target="DatePickerPlugin" />
+    </js-module>
+
+    <engines>
+        <engine name="cordova" version="&gt;=3.0.0" />
+    </engines>
+
+    <platform name="android">
+        <config-file target="res/xml/config.xml" parent="/*">
+            <feature name="DatePickerPlugin" >
+                <param name="android-package" value="no.zeppelin.plugins.DatePickerPlugin"/>
+            </feature>
+        </config-file>
+
+        <source-file src="src/android/DatePickerPlugin.java" target-dir="src/no/zepplin/plugins" />
+    </platform>
+
+</plugin>
