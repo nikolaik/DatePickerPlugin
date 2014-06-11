@@ -6,7 +6,7 @@
 
     <name>DatePickerPlugin</name>
     <author>Cristobal Dabed</author>
-    <description>This plugin gives you a native datepicker widget on Android (2.x style)</description>
+    <description>This plugin gives you a native datepicker widget on Android</description>
     <license>MIT</license>
 
     <js-module src="www/DatePickerPlugin.js" name="DatePickerPlugin">
