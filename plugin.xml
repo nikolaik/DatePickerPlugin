@@ -9,8 +9,8 @@
     <description>This plugin gives you a native datepicker widget on Android</description>
     <license>MIT</license>
 
-    <js-module src="www/DatePickerPlugin.js" name="DatePickerPlugin">
-        <clobbers target="DatePickerPlugin" />
+    <js-module src="www/DatePickerPlugin.js" name="DatePicker">
+        <clobbers target="DatePicker" />
     </js-module>
 
     <engines>
@@ -19,7 +19,7 @@
 
     <platform name="android">
         <config-file target="res/xml/config.xml" parent="/*">
-            <feature name="DatePickerPlugin" >
+            <feature name="DatePicker">
                 <param name="android-package" value="no.zeppelin.plugins.DatePickerPlugin"/>
             </feature>
         </config-file>
