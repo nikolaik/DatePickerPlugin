@@ -124,9 +124,9 @@ public class DatePickerPlugin extends CordovaPlugin {
          * Return a string containing the date in the format YYYY/MM/DD
          */
         public void onDateSet(final DatePicker view, final int year, final int monthOfYear, final int dayOfMonth) {
-            String dateValue = Integer.toString(year) + "-" + pad(Integer.toString(monthOfYear + 1)) + "-" + pad(Integer.toString(dayOfMonth)) + "T00:00:00Z";
+            String dateValue = Integer.toString(year) + "-" + pad(Integer.toString(monthOfYear + 1)) + "-" + pad(Integer.toString(dayOfMonth)) + "T00:00:00Z+00:00";
 
-            SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss'Z'");
+            SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss'Z'X");
             Date date;
             JSONObject message;
             try {
