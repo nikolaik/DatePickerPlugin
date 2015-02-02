@@ -10,6 +10,8 @@ package no.zeppelin.plugins;
 
 import java.util.Calendar;
 import java.util.Date;
+import java.util.TimeZone;
+
 import java.text.SimpleDateFormat;
 import java.text.ParseException;
 
@@ -124,9 +126,10 @@ public class DatePickerPlugin extends CordovaPlugin {
          * Return a string containing the date in the format YYYY/MM/DD
          */
         public void onDateSet(final DatePicker view, final int year, final int monthOfYear, final int dayOfMonth) {
-            String dateValue = Integer.toString(year) + "-" + pad(Integer.toString(monthOfYear + 1)) + "-" + pad(Integer.toString(dayOfMonth)) + "T00:00:00Z+00:00";
+            String dateValue = Integer.toString(year) + "-" + pad(Integer.toString(monthOfYear + 1)) + "-" + pad(Integer.toString(dayOfMonth)) + "T00:00:00";
 
-            SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss'Z'X");
+            SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss");
+            dateFormat.setTimeZone(TimeZone.getTimeZone("UTC"));
             Date date;
             JSONObject message;
             try {
